@@ -1,4 +1,6 @@
-import '../styles/globals.css'
+import 'react-datepicker/dist/react-datepicker.css';
+import '../styles/globals.css';
+import '../styles/date-picker.scss';
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 

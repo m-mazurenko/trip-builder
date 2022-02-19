@@ -1,4 +1,3 @@
-import {useEffect} from 'react';
 import Image from 'next/image';
 import { tripsApiUrl } from '../constants/api-urls';
 import {TripModel} from '../models/Trip.model';
@@ -7,15 +6,12 @@ import { ChevronDownIcon, CalendarIcon } from '@chakra-ui/icons';
 
 const TripListItem = ({ trip, onDeleteCb }: { trip: TripModel, onDeleteCb: (id: TripModel['id']) => void }) => {
 
-  function deleteTrip() {
+  const deleteTrip = () => {
     fetch(`${tripsApiUrl}/${trip.id}`, {
-      method: 'Delete',
+      method: 'DELETE',
     })
       .then((res) => res.json())
-      .then((data) => {
-        onDeleteCb(trip.id);
-        console.log(data);
-      })
+      .then(() => { onDeleteCb(trip.id) })
   }
 
   return (

@@ -1,0 +1,29 @@
+.react-datepicker {
+  &-popper[data-placement^=bottom] {
+    padding-top: 0;
+  }
+
+  &__triangle {
+    visibility: hidden;
+  }
+
+  &__input-container {
+    input {
+      min-width: 0;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      position: relative;
+      appearance: none;
+      transition-property: var(--chakra-transition-property-common);
+      transition-duration: var(--chakra-transition-duration-normal);
+      font-size: var(--chakra-fontSizes-md);
+      padding-inline-start: var(--chakra-space-4);
+      padding-inline-end: var(--chakra-space-4);
+      height: var(--chakra-sizes-10);
+      border-radius: var(--chakra-radii-md);
+      border: 1px solid;
+      border-color: inherit;
+      background: inherit;
+    }
+  }
+}

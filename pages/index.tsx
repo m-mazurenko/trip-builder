@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
       <section>
         <Box mt={3}>
-          <Link href="/posts/create">
+          <Link href="/trips/create">
             <Button colorScheme='blue'>Add New Trip</Button>
           </Link>
         </Box>
