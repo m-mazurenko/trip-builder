@@ -1,8 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a Trip Builder web application project built with Next.js.
+
+## Before the first run
+
+Create `.env.local` config file with `NEXT_PUBLIC_API_URL` which points to the API url.
+
+You can use url from `.env.example` file. But if you want to use your own, please make sure your endpoint returns correct `Trip` model schema (ref. `./models/Trip.model.ts`)
+
+Make sure you added all domains which handle your images into `next.config.js`
+
+```
+  images: {
+    domains: ['placeimg.com'],
+  },
+```
 
 ## Getting Started
 
-First, run the development server:
+First, install all dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -11,8 +33,6 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
