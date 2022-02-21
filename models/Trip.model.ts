@@ -3,7 +3,7 @@ export interface TripModel {
   createdAt: string,
   name: string,
   destination: string,
-  startDate: number,
-  endDate: number,
+  startDate: string,
+  endDate: string,
   image: string,
 }
